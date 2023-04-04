@@ -1,0 +1,41 @@
+# 在项目启动前，将所有<xxx>改为自己的配置信息
+# 然后，将该文件改为conf.yaml，在启动项目即可
+
+server:
+  # 应用名
+  name: blog-server-go
+  # 运行端口
+  port: 8088
+
+#数据库
+mysql:
+  url: tcp(<mysql-ip>:<mysql-port>)/<db-name>?charset=utf8mb4&parseTime=True&loc=UTC
+  username: <mysql-username>
+  password: <mysql-password>
+
+# redis缓存
+redis:
+  host: <redis-ip>
+  port: <redis-port>
+  password: <redis-password>
+  timeout: 30000ms
+
+# jwt权限控制
+jwt:
+  # token过期时间，单位s，为避免操作繁琐，本项目取3h
+  max-age: 10800
+  # 自定义32位签名密钥，必须高度保密！
+  secret: <jwt-secret>
+
+# 七牛云配置
+qiniu:
+  access-key: <qiniu-access-key>
+  secret-key: <qiniu-secret-key>
+  bucket: <qiniu-bucket>
+
+# 阿里云短信服务
+aliyun-sms:
+  access-key-id: <sms-access-key>
+  access-key-secret: <sms-secret-key>
+  sign-name: <sms-sign-name>
+  template-code: <sms-template-code>
