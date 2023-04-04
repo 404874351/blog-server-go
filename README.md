@@ -57,7 +57,7 @@ server
 
 ```bash
 # 克隆项目
-git clone https://gitee.com/zhong_jiachen/blog-server-go.git
+git clone https://github.com/404874351/blog-server-go.git
 # 进入工程目录
 cd blog-server-go
 # 将conf.example.yaml复制一份到conf.yaml，作为正式的配置文件
